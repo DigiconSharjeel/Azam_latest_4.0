@@ -1,8 +1,0 @@
-<resources>
-    <string name= "app_name">Tour Guide</string>>
-    <string-array name="Tour_Guide">
-        <item>Historical Places</item>
-        <item>Wild Life</item>
-        <item>Restaurants</item>
-    </string-array>
-</resources>
