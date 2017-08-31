@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_image2" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/image1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginStart="82dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_tiger" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignEnd="@+id/image2"
+        android:layout_alignRight="@+id/image2"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_images" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/image2"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_bird1" />
+
+
+</LinearLayout>

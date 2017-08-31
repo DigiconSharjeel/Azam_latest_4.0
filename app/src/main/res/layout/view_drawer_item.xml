@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_res2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"/>
+<TextView
+    android:layout_toRightOf="@+id/im"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    tools:text="Order history"
+    android:textColor="#adadb0"
+    android:id="@id/sliderItemTitle"
+    android:textSize="18sp"
+    android:padding="10dp" />
+</RelativeLayout>
