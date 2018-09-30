@@ -16,7 +16,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,34 +81,34 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
             final List<SliderMenuItem> sliderMenuItems = new ArrayList<>();
             final SliderMenuItem item1 = new SliderMenuItem();
             item1.setId(1);
-            item1.setTitle("Recents");
+            item1.setTitle("HOME");
             item1.setIconImageId(R.drawable.recents);
             item1.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override
                 public void handleMenuClick() {
-                    startDrawerActivity(CultureFragment.class);
+                    startDrawerActivity(WebView.class);
                 }
             });
 
             final SliderMenuItem item2 = new SliderMenuItem();
             item2.setId(2);
-            item2.setTitle("Tasks");
+            item2.setTitle("CALL US");
             item2.setIconImageId(R.drawable.tasks);
             item2.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override
                 public void handleMenuClick() {
-                    startDrawerActivity(HistoricalFragment.class);
+                    startDrawerActivity(CallActivity.class);
                 }
             });
 
             final SliderMenuItem item3 = new SliderMenuItem();
             item3.setId(3);
-            item3.setTitle("Vira");
+            item3.setTitle("ABOUT");
             item3.setIconImageId(R.drawable.vira);
             item3.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override
                 public void handleMenuClick() {
-                    startDrawerActivity(RestaurantFragment.class);
+                    startDrawerActivity(About.class);
                 }
             });
 
@@ -139,7 +138,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     item1.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
-                            startDrawerActivity(CultureFragment.class);
+                            startDrawerActivity(WebView.class);
                         }
                     });
 
@@ -150,7 +149,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     item2.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
-                            startDrawerActivity(HistoricalFragment.class);
+                            startDrawerActivity(CallActivity.class);
                         }
                     });
 
@@ -177,35 +176,35 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     final List<SliderMenuItem> sliderMenuItems = new ArrayList<>();
                     final SliderMenuItem item1 = new SliderMenuItem();
                     item1.setId(1);
-                    item1.setTitle("Recents");
+                    item1.setTitle("HOME");
                     item1.setIconImageId(R.drawable.recents);
                     item1.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
 
-                            startDrawerActivity(CultureFragment.class);
+                            startDrawerActivity(WebView.class);
                         }
                     });
 
                     final SliderMenuItem item2 = new SliderMenuItem();
                     item2.setId(2);
-                    item2.setTitle("Tasks");
+                    item2.setTitle("CALL US");
                     item2.setIconImageId(R.drawable.tasks);
                     item2.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
-                            startDrawerActivity(HistoricalFragment.class);
+                            startDrawerActivity(CallActivity.class);
                         }
                     });
 
                     final SliderMenuItem item3 = new SliderMenuItem();
                     item3.setId(3);
-                    item3.setTitle("Vira");
+                    item3.setTitle("ABOUT");
                     item3.setIconImageId(R.drawable.vira);
                     item3.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
-                            startDrawerActivity(RestaurantFragment.class);
+                            startDrawerActivity(About.class);
                         }
                     });
 

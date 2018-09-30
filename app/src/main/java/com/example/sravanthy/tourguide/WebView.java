@@ -3,21 +3,20 @@ package com.example.sravanthy.tourguide;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
-public class MainActivity extends BaseActivityWithDrawer {
-    private WebView webView;
+/**
+ * Created by sandeep on 11/23/2016.
+ */
+public class WebView extends BaseActivityWithDrawer {
+    private android.webkit.WebView webView;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        LayoutInflater.from(this).inflate(R.layout.activity_main, getFrame());
+        LayoutInflater.from(this).inflate(R.layout.web_view, getFrame());
 
         webView = (android.webkit.WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
@@ -25,7 +24,7 @@ public class MainActivity extends BaseActivityWithDrawer {
         //https://developer.android.com
         //http://www.azam-market.com
         webView.setWebViewClient(new WebViewClient() {
-            public void onReceivedError(WebView webView, int errorCode, String description, String failingUrl) {
+            public void onReceivedError(android.webkit.WebView webView, int errorCode, String description, String failingUrl) {
                 try {
                     webView.stopLoading();
                 } catch (Exception e) {
@@ -36,7 +35,7 @@ public class MainActivity extends BaseActivityWithDrawer {
                 }
 
                 webView.loadUrl("about:blank");
-                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(WebView.this).create();
                 alertDialog.setTitle("Error");
                 alertDialog.setMessage("Check your internet connection and try again.");
                 alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Try Again", new DialogInterface.OnClickListener() {
@@ -66,9 +65,10 @@ public class MainActivity extends BaseActivityWithDrawer {
 
     }
 
+
     @Override
     public boolean shouldEnableDrawer() {
         return true;
     }
-
 }
+

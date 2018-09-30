@@ -1,5 +1,5 @@
 <resources>
-    <string name= "app_name">Navigation Drawer</string>
+    <string name="app_name">Azam Market</string>
     <string name="historicalplaces">Historical Places</string>
     <string name="wildlife">WildLife</string>
     <string name="restaurants">Restaurants</string>

@@ -1,25 +1,44 @@
 package com.example.sravanthy.tourguide;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
-public class MainActivity extends BaseActivityWithDrawer {
+/**
+ * Created by sandeep on 11/22/2016.
+ */
+public class CallActivity extends BaseActivityWithDrawer {
+
+    private static final String TAG = CallActivity.class.getSimpleName();
     private WebView webView;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG, "onCreate: " );
+        LayoutInflater.from(this).inflate(R.layout.call_us, getFrame());
 
-        LayoutInflater.from(this).inflate(R.layout.activity_main, getFrame());
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:03084408565"));
 
-        webView = (android.webkit.WebView) findViewById(R.id.webview);
+        if (ActivityCompat.checkSelfPermission(CallActivity.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        startActivity(callIntent);
+
+
+        webView = (WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("http://www.azam-market.com");
         //https://developer.android.com
@@ -36,7 +55,7 @@ public class MainActivity extends BaseActivityWithDrawer {
                 }
 
                 webView.loadUrl("about:blank");
-                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(CallActivity.this).create();
                 alertDialog.setTitle("Error");
                 alertDialog.setMessage("Check your internet connection and try again.");
                 alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Try Again", new DialogInterface.OnClickListener() {
@@ -66,9 +85,15 @@ public class MainActivity extends BaseActivityWithDrawer {
 
     }
 
+
+
+
+
+
+
+
     @Override
     public boolean shouldEnableDrawer() {
         return true;
     }
-
 }

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sravanthy.tourguide">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -11,38 +15,49 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Activity 1"
+            android:label="Azam Market"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
 
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".CallActivity"
+            android:label="Activity 2"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".WebView"
+            android:label="Activity 3"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="Activity 4"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HistoricalFragment"
-            android:label="Activity 2" android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
-        </activity>
-
-        <activity
-            android:name=".CultureFragment"
-            android:label="Activity 3" android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
-        </activity>
-
-        <activity
-            android:name=".RestaurantFragment"
-            android:label="Activity 4" android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
-        </activity>
     </application>
-
 
 </manifest>
