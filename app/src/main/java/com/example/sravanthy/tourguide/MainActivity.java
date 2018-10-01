@@ -2,10 +2,14 @@ package com.example.sravanthy.tourguide;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -13,11 +17,26 @@ import android.widget.TextView;
 
 public class MainActivity extends BaseActivityWithDrawer {
     private WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         LayoutInflater.from(this).inflate(R.layout.activity_main, getFrame());
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                boolean isFirstStart = getPrefs.getBoolean("firstStart",true);
+                if(isFirstStart){
+                    startActivity(new Intent(MainActivity.this, Tutorial.class));
+                    SharedPreferences.Editor e = getPrefs.edit();
+                    e.putBoolean("firstStart" , false);
+                    e.apply();
+                }
+            }
+        });
+        thread.start();
 
         webView = (android.webkit.WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());

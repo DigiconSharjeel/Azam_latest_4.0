@@ -74,7 +74,6 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                 }
             };
 
-
             leftDrawer.setDrawerListener(mDrawerToggle);
 
             //Populate the drawer
@@ -225,7 +224,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
     }
 
     private void startDrawerActivity(final Class activity) {
-        leftDrawer.closeDrawer(GravityCompat.START);
+        leftDrawer.closeDrawer(GravityCompat.END);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

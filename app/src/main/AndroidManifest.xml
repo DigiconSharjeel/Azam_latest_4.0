@@ -15,14 +15,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:hardwareAccelerated="false"
             android:label="Azam Market"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-
-
         </activity>
         <activity
             android:name=".CallActivity"
@@ -58,6 +57,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".GIFView"></activity>
+        <activity android:name=".Tutorial"></activity>
     </application>
 
 </manifest>
