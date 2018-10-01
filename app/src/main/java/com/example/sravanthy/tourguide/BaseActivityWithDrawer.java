@@ -32,7 +32,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
     FrameLayout contentFrame;
     LinearLayout drawerView;
     DrawerLayout leftDrawer;
-
+    //#3b4371 nav_color
     public static final String TAG = BaseActivityWithDrawer.class.getSimpleName();
     private ActionBarDrawerToggle mDrawerToggle;
 
@@ -81,7 +81,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
             final SliderMenuItem item1 = new SliderMenuItem();
             item1.setId(1);
             item1.setTitle("HOME");
-            item1.setIconImageId(R.drawable.recents);
+            item1.setIconImageId(R.drawable.ic_home);
             item1.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override
                 public void handleMenuClick() {
@@ -92,7 +92,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
             final SliderMenuItem item2 = new SliderMenuItem();
             item2.setId(2);
             item2.setTitle("CALL US");
-            item2.setIconImageId(R.drawable.tasks);
+            item2.setIconImageId(R.drawable.ic_call);
             item2.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override
                 public void handleMenuClick() {
@@ -103,7 +103,8 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
             final SliderMenuItem item3 = new SliderMenuItem();
             item3.setId(3);
             item3.setTitle("ABOUT");
-            item3.setIconImageId(R.drawable.vira);
+            setTitleColor(12);
+            item3.setIconImageId(R.drawable.ic_info);
             item3.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override
                 public void handleMenuClick() {
@@ -133,7 +134,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     final SliderMenuItem item1 = new SliderMenuItem();
                     item1.setId(1);
                     item1.setTitle("check");
-                    item1.setIconImageId(R.drawable.recents);
+                    item1.setIconImageId(R.drawable.ic_home);
                     item1.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
@@ -144,7 +145,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     final SliderMenuItem item2 = new SliderMenuItem();
                     item2.setId(2);
                     item2.setTitle("click");
-                    item2.setIconImageId(R.drawable.tasks);
+                    item2.setIconImageId(R.drawable.ic_call);
                     item2.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
@@ -176,7 +177,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     final SliderMenuItem item1 = new SliderMenuItem();
                     item1.setId(1);
                     item1.setTitle("HOME");
-                    item1.setIconImageId(R.drawable.recents);
+                    item1.setIconImageId(R.drawable.ic_home);
                     item1.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
@@ -188,7 +189,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     final SliderMenuItem item2 = new SliderMenuItem();
                     item2.setId(2);
                     item2.setTitle("CALL US");
-                    item2.setIconImageId(R.drawable.tasks);
+                    item2.setIconImageId(R.drawable.ic_call);
                     item2.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {
@@ -199,7 +200,7 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
                     final SliderMenuItem item3 = new SliderMenuItem();
                     item3.setId(3);
                     item3.setTitle("ABOUT");
-                    item3.setIconImageId(R.drawable.vira);
+                    item3.setIconImageId(R.drawable.ic_info);
                     item3.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                         @Override
                         public void handleMenuClick() {

@@ -27,7 +27,7 @@
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:background="@android:color/white"
+        android:background="#e3ffffff"
         android:fitsSystemWindows="true">
 
 
@@ -39,7 +39,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:background="#3b4371"
+                    android:background="#eb3b4371"
                     android:layout_height="wrap_content">
 
                     <ImageView
@@ -57,14 +57,15 @@
                         android:layout_marginTop="32dp"
                         android:layout_toRightOf="@id/im"
                         android:text="Azam Market"
+                        android:fontFamily="cursive"
                         android:textColor="#ffffff"
-                        android:textSize="18sp" />
+                        android:textSize="28sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:clickable="true"
                     android:layout_width="match_parent"
-                    android:background="#3b4371"
+                    android:background="#eb3b4371"
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -73,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:text="sara@tatasteels.com"
+                        android:text="Sharjeelhashmi.18@gmail.com"
                         android:textColor="#ffffff"
                         android:textSize="14sp" />
 

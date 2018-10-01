@@ -8,19 +8,26 @@
         android:text="Slide to Right For Navigation"
         android:textAlignment="center"
         android:layout_alignParentTop="true"
+        android:background="#ff7a27"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:id="@+id/text_view1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" />
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
+        android:layout_below="@+id/text_view1"
         android:layout_height="match_parent"
         android:id="@+id/gif_view"
-        android:src="@drawable/nav_intro"
+        android:src="@drawable/nav_intro2"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:onClick="next_button"
+        android:background="#ff7a27"
+        android:textColor="#ffffff"
         android:text="Next |>"/>
 </RelativeLayout>

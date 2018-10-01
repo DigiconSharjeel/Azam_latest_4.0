@@ -10,7 +10,7 @@ import android.view.View;
 public class Tutorial extends AppCompatActivity {
 
 
-    CustomPagerAdapter mCustomPagerAdapter;
+
     ViewPager mViewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
