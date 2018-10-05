@@ -103,7 +103,6 @@ public abstract class BaseActivityWithDrawer extends AppCompatActivity {
             final SliderMenuItem item3 = new SliderMenuItem();
             item3.setId(3);
             item3.setTitle("ABOUT");
-            setTitleColor(12);
             item3.setIconImageId(R.drawable.ic_info);
             item3.setClickHandler(new SliderMenuItem.MenuItemClickHandler() {
                 @Override

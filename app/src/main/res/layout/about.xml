@@ -1,16 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#edffbe">
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
   <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="ABOUT US"
+      android:background="#ff7a27 "
+      android:id="@+id/first_heading"
+      android:textAlignment="center"
+      android:textSize="30sp"
+      android:textColor="#ffffff"
+      android:layout_centerInParent="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="16dp"
+      android:layout_marginBottom="16dp"/>
+<ScrollView
+    android:layout_below="@+id/first_heading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+  <TextView
+      android:id="@+id/first_paragraph"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="DIGICON VALLEY"
-      android:textSize="30dp"
-      android:textColor="#58ce19"
-      android:layout_centerInParent="true"/>
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/first_heading"
+      android:layout_margin="10dp"
+      android:text="Hello! Welcome to Azam Market"
+      android:textColor="#ff7a27"
+      android:textSize="20sp" />
+
+  <TextView
+      android:id="@+id/second_paragraph"
+
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:singleLine="false"
+      android:maxLines="10"
+      android:layout_below="@+id/first_paragraph"
+      android:text="We provide a single platform for the cloth shopkeepers to put their fine quality cloth
+products and show their online presence"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/third_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/second_paragraph"
+      android:layout_margin="10dp"
+      android:text="Management System"
+      android:textColor="#ff7a27"
+      android:textSize="20sp" />
+
+  <TextView
+      android:id="@+id/sub_1_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/third_paragraph"
+      android:text="1. Make your cloth  business fast through our managment system"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/sub_2_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/sub_1_paragraph"
+      android:text="2. Get rid of manual work"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/sub_3_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/sub_2_paragraph"
+      android:text="3. Maintain your stock system"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/sub_4_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/sub_3_paragraph"
+      android:text="4. Safety of your data"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+
+  <TextView
+      android:id="@+id/fifth_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/sub_4_paragraph"
+      android:layout_margin="10dp"
+      android:text="Contact Info"
+      android:textColor="#ff7a27"
+      android:textSize="20sp" />
+
+  <TextView
+      android:id="@+id/contact_1_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/fifth_paragraph"
+      android:text="We are a team of designers and developers that
+create high quality Magento, Prestashop, Opencart"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/contact_2_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/contact_1_paragraph"
+      android:text="Address: 17/B Angori Scheme #2 Shalamar link road, Lahore"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/contact_3_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/contact_2_paragraph"
+      android:text="Number: 0322-4222913"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+  <TextView
+      android:id="@+id/contact_4_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="10dp"
+      android:maxLines="10"
+      android:layout_below="@+id/contact_3_paragraph"
+      android:text="Email: Info@azam-market.com"
+      android:textColor="#000000"
+      android:textSize="17sp" />
+
+
+  </LinearLayout>
+</ScrollView>
 
 </RelativeLayout>
+

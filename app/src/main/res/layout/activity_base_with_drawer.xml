@@ -27,7 +27,7 @@
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:background="#e3ffffff"
+        android:background="#ad000000"
         android:fitsSystemWindows="true">
 
 
@@ -39,13 +39,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:background="#eb3b4371"
+                    android:background="@drawable/pattern_background_2"
                     android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/im"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="10dp"
                         android:src="@drawable/azam_market_logo" />
@@ -65,17 +65,17 @@
                 <RelativeLayout
                     android:clickable="true"
                     android:layout_width="match_parent"
-                    android:background="#eb3b4371"
+                    android:background="#ffffff"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:text="Sharjeelhashmi.18@gmail.com"
-                        android:textColor="#ffffff"
+                        android:text="Info@azam-market.com"
+                        android:textColor="#ff7a27"
                         android:textSize="14sp" />
 
                     <ImageView

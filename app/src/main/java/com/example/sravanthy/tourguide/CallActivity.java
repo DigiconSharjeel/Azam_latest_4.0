@@ -29,7 +29,7 @@ public class CallActivity extends BaseActivityWithDrawer {
         LayoutInflater.from(this).inflate(R.layout.call_us, getFrame());
 
         Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:03084408565"));
+        callIntent.setData(Uri.parse("tel:03224222913"));
 
         if (ActivityCompat.checkSelfPermission(CallActivity.this,
                 Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
